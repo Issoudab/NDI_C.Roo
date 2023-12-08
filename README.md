@@ -11,7 +11,7 @@ Il faut installer les packages python openai et django.
 
 # Utilisation du site
 
-Il faut d'abord lancer un server local. Pour cela, il faut lancer un terminal dans le dossier "NDI/django_chatbot/".
+Il faut d'abord lancer un server local. Pour cela, il faut lancer un terminal dans le dossier **NDI/django_chatbot/**.
 On peut donc lancer le serveur local avec la commande : 
 
 `python3 manage.py runserver`
