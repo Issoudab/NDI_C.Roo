@@ -17,7 +17,7 @@ On peut donc lancer le serveur local avec la commande :
 `python3 manage.py runserver`
 
 Suite à cela, l'avant dernière ligne du terminal doit être : 
-> Starting development server at <Url>
+> Starting development server at *URL*
 
 Dans mon cas, j'obtiens : 
 
