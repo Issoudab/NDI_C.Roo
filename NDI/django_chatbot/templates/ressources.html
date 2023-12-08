@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archives</title>
+    <style>
+        body {
+            background-color: #e0f2f1; /* Une teinte de vert pour évoquer l'écologie */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            background-color: #4caf50; /* Vert plus foncé pour le haut de la page */
+            color: #fff;
+            padding: 20px;
+        }
+
+        img {
+            display: block;
+            margin: auto;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%; /* Pour rendre l'image circulaire */
+            background-color: #fff; /* Fond blanc pour les images avec des coins transparents */
+            padding: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #004d40; /* Une nuance plus foncée de vert pour le titre */
+        }
+
+        p {
+            text-align: center;
+            padding: 2% 5%;
+            font-size: 1.2em;
+            color: #333; /* Couleur de texte plus foncée */
+        }
+
+        .bloc_acceuil {
+            margin: auto;
+            width: 80%;
+            background-color: #81c784; /* Une teinte de vert pour le fond des blocs */
+            padding: 2%;
+            border-radius: 10px; /* Coins arrondis pour une apparence plus conviviale */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Légère ombre pour le bloc */
+            margin-top: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #004d40; /* Nuance plus foncée de vert pour les titres des blocs */
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            padding-left: 7rem;
+            background-image: url("thing/lorax.jpg"); /* Utilisation d'une feuille pour les puces */
+            background-position: 0 0;
+            background-size: 5rem 5rem;
+            background-repeat: no-repeat;
+            margin-bottom: 10px;
+        }
+        .c {
+            background: #d63e3e;
+            /*background-image: url(thing/tumblr.png);*/
+            background-size: 17% 17%;
+        }
+
+        .c:hover {
+            background-image: url(thing/tumblr.png);
+            /*background: #d32f2f;*/ /* Changement de couleur au survol */
+        }
+
+        .link {
+            display: flex;
+            position: sticky;
+            width: 13%;
+            height: 13%;
+            font-size: 150%;
+            text-align: center;
+            margin: auto;
+            padding: 5px;
+            justify-content: center;
+            align-items: center;
+            background: #e57373;
+            border-radius: 10px;
+            border-style: double;
+            border-color: white;
+            text-decoration: none;
+        }
+
+
+
+        .link:hover {
+            /*background: #e57373;*/
+            background-image: url(thing/tumblr.png);
+            background-size: 100% 100%;
+
+            /*background: url(thing/tumblr.png);*/ /*#d32f2f;*/ /* Changement de couleur au survol */
+        }
+    </style>
+</head>
+
+<script>
+  // Fonction pour générer une couleur hexadécimale aléatoire
+  function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+  const konamiCode = [
+    'ArrowUp',
+    'ArrowUp',
+    'ArrowDown',
+    'ArrowDown',
+    'ArrowLeft',
+    'ArrowRight',
+    'ArrowLeft',
+    'ArrowRight',
+    'b',
+    'a'
+  ];
+
+  let konamiCodePosition = 0;
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === konamiCode[konamiCodePosition]) {
+      konamiCodePosition++;
+      if (konamiCodePosition === konamiCode.length) {
+        // Changez la couleur de fond et de texte en couleurs aléatoires
+        const randomBackgroundColor = getRandomColor();
+        const randomTextColor = getRandomColor();
+        
+        document.body.style.backgroundColor = randomBackgroundColor;
+        document.body.style.color = randomTextColor;
+        
+        konamiCodePosition = 0;
+      }
+    } else {
+      konamiCodePosition = 0;
+    }
+  });
+</script>
+
+
+
+
+<body>
+    <header>
+        <img src="thing/mascotte.png" alt="Mascotte d'ÉcoChuu">
+        <h1>ÉcoChuu</h1>
+    </header>
+    
+    <p>Bienvenue dans le codex jeune recrue. Ce site te permettra d'approfondir tes connaissances face au changement climatique. Cela te permettra de mieux comprendre l'ennemi auquel nous faisons face. Nous comptons sur toi pour nous aider à élaborer des solutions contre ce fléau. Ton aide nous sera crucial, l'avenir du monde dépendra de nous tous.</p>
+    <div class="link"><a href="login" class="c">Rentrer dans l'Animus</a></div>
+    <p>Tu peux accéder à l'Animus à tout moment en cliquant sur le bouton si dessus. Tu pourras y converser avec le plus illustre des Assassins que Bordeaux ait porté.</p>
+
+     <p>Tu trouveras ci-dessous des archives que nous avons récoltées au cours de nos recherches. Nous mettons ces ressources à ta disposition pour vous aider à vous renseigner et améliorer votre quotidien pour avoir une empreinte carbone moins élevée.</p>
+
+    <div class="bloc_acceuil">
+        <h2 id="ressources">Ressources</h2>
+        <div> 
+            <div>
+                <h3> Réseau Action Climat </h3>
+                <ul>
+                    <li>
+                        <a href="https://reseauactionclimat.org/association/"> L'urgence climatique : </a> 
+                        <p>La fédération réseau action climat France est une fédération englobant de nombreuses assiociations à échelle globale et locale. Leur but est de réduire l'émission de gaz à effet de serre. Pour ce faire, ils préparent nombre d'actions telle que ....</p>
+                    </li>
+                    <li>
+                        <a href="https://reseauactionclimat.org/6e-rapport-du-giec-quelles-sol utions-face-au-changement-climatique/"> Quelles solutions face au changement climatique ? </a> 
+                        <p>Infos sur le site</p>
+                    </li>
+            </div>
+        </div>
+        <div>
+            <h3> ADEME </h3>
+            <ul>
+                <li>
+                    <a href="https://www.ademe.fr/"> Site de l'ADEME : </a> 
+                    <p>Infos sur le site</p>
+                </li>
+
+                <li>
+                    <a href="https://data.ademe.fr/"> Données</a>  - <a href="https://data-transitions2050.ademe.fr/"> Encore des données :</a>
+                    <p>Infos sur le site</p>
+                </li>
+
+                <li>
+                    <a href="https://www.imdb.com/title/tt1482459/"> Pour détendre l'atmosphère</a> 
+                    <p>Infos sur le site</p>
+                </li>
+                <li>
+                    <a href="https://nosgestesclimat.fr/
+"> Simulateur d’empreinte carbone : </a> 
+                    <p>Infos sur le site</p>
+                </li>
+        </div>
+        <div>
+            <h3> GIEC: </h3>
+            <ul>
+                <li>
+                    <a href="https://www.ipcc.ch/"> IPCC</a> 
+                    <p>Infos sur le site</p>
+                </li>
+                <li>
+                    <a href="google.com"> Une IA qui connaît les contenus du dernier rapport du GIEC :</a> 
+                    <p>Infos sur le site</p>
+                </li>
+        </div>
+        <div>
+            <h3> Haut conseil pour le climat : </h3>
+            <ul>
+                <li>
+                    <a href="https://www.hautconseilclimat.fr/"> Site du Haut conseil pour le climat :</a> 
+                    <p>Infos sur le site</p>
+                </li>
+        </div>
+        <div>
+            <h3> Bon Pote : </h3>
+            <ul>
+                <li>
+                    <a href="https://bonpote.com/"> Site Bon Pote :</a> 
+                    <p>Infos sur le site</p>
+                </li>
+        </div>
+        <div>
+            <h3> Le B.A.-BA du climat : </h3>
+            <ul>
+                <li>
+                    <a href=" https://climat.cned.fr/formations/"> Site du Le B.A.-BA du climat :</a> 
+                    <p>Infos sur le site</p>
+                </li>
+        </div>
+    </div>
+    <!-- <a href="bot" class="link">Lien vers l'Animus</a>-->
+    
+</body>
+</html>
